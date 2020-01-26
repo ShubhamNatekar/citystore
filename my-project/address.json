@@ -1,0 +1,26 @@
+{
+	"country":"India",
+	"01":
+		{
+			"state":"maharashtra",
+			"01":
+				{
+					"district":"pune",
+					"01":"Ambegaon",
+					"02":"Baramati",
+					"03":"Bhor",
+					"04":"Daund",
+					"05":"Haveli",
+					"06":"Indapur",
+					"07":"Junnar",
+					"08":"Khed",
+					"09":"Maval",
+					"10":"Mulshi",
+					"11":"Pune_city",
+					"12":"Purandar",
+					"13":"Shirur",
+					"14":"Velhe"
+				}
+	
+		}
+}

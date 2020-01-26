@@ -1,0 +1,30 @@
+Andhra_Pradesh -9
+Arunachal_Pradesh -22	
+Assam -33
+Bihar -38
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal_Pradesh
+Jammu_Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya_Pradesh
+Maharashtra -36
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Orissa
+Punjab
+Rajasthan
+Sikkim
+Tamil_Nadu
+Telangana
+Tripura
+Uttar_Pradesh
+Uttarakhand
+West_Bengal
+

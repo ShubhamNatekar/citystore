@@ -1,0 +1,14 @@
+demo@ubuntu:~/docker/microservices-docker-go-mongodb$ docker-compose up -d
+Starting microservices-docker-go-mongodb_movies_1 ... 
+Starting microservices-docker-go-mongodb_users_1  ... 
+Starting microservices-docker-go-mongodb_bookings_1 ... 
+microservices-docker-go-mongodb_proxy_1 is up-to-date
+Starting microservices-docker-go-mongodb_movies_1    ... done
+Starting microservices-docker-go-mongodb_users_1     ... done
+Starting microservices-docker-go-mongodb_bookings_1  ... done
+Starting microservices-docker-go-mongodb_showtimes_1 ... done
+_1 (b6018896a267bea8bd91c41c2a52de3fff050f9265754bd57ed2d670a177b3d3): Error starting userland proxy: listen tcp 0.0.0.0:27017: bind: address already in use
+
+ERROR: for db  Cannot start service db: driver failed programming external connectivity on endpoint microservices-docker-go-mongodb_db_1 (b6018896a267bea8bd91c41c2a52de3fff050f9265754bd57ed2d670a177b3d3): Error starting userland proxy: listen tcp 0.0.0.0:27017: bind: address already in use
+ERROR: Encountered errors while bringing up the project.
+
