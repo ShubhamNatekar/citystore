@@ -1,1 +1,1 @@
-This project is based on e-commerce shopping application.
+This is an online shoping site which provides the products from city stores
