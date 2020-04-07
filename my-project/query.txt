@@ -1,2 +1,0 @@
-db.address.find({},{"01.01.04":1,_id:0}).pretty();
-db.address.aggregate({$project:{"01.01.04":1,_id:0}}).pretty();

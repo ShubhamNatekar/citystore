@@ -1,2 +1,0 @@
-From outside the cluster, the customers microservice URL is: http://{{ .Values.ingress.host }}
-Get the list of customers: http://{{ .Values.ingress.host }}/customers
