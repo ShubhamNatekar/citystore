@@ -11,7 +11,7 @@ import (
 
 type Product struct {
 	ID        uint64    `gorm:"primary_key;auto_increment" json:"id"`
-	Product_Name     string    `gorm:"size:255;not null;unique" json:"product_name"`
+	Product_name     string    `gorm:"size:255;not null;unique" json:"product_name"`
 	Owner    User      `json:"owner"`
 	OwnerID  uint32    `gorm:"not null" json:"owner_id"`
 	Quantity uint32    `gorm:"not null" json:"quantity"`
@@ -22,7 +22,7 @@ type Product struct {
 
 func (p *Product) Prepare() {
 	p.ID = 0
-	p.Product_Name = html.EscapeString(strings.TrimSpace(p.Product_Name))
+	p.Product_name = html.EscapeString(strings.TrimSpace(p.Product_name))
 	p.Owner = User{}
 	//p.Quantity=0
 	//p.Cost=0
@@ -31,13 +31,13 @@ func (p *Product) Prepare() {
 }
 
 func (p *Product) Validate() error {
-	if p.Product_Name == "" {
-		return errors.New("Required Product_Name")
+	if p.Product_name == "" {
+		return errors.New("Required Product_name")
 	}
-	if p.Cost == "" {
+	if p.Cost < 1 {
 		return errors.New("Required Cost")
 	}
-	if p.Quantity == "" {
+	if p.Quantity < 1 {
 		return errors.New("Required Quantity")
 	}
 	if p.OwnerID < 1 {
@@ -98,7 +98,7 @@ func (p *Product) UpdateAProduct(db *gorm.DB) (*Product, error) {
 
 	var err error
 
-	err = db.Debug().Model(&Product{}).Where("id = ?", p.ID).Updates(Product{Product_Name: p.Product_Name, Content: p.Content, UpdatedAt: time.Now()}).Error
+	err = db.Debug().Model(&Product{}).Where("id = ?", p.ID).Updates(Product{Product_name: p.Product_name, Cost: p.Cost,Quantity: p.Quantity, UpdatedAt: time.Now()}).Error
 	if err != nil {
 		return &Product{}, err
 	}

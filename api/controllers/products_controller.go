@@ -39,7 +39,7 @@ func (server *Server) CreateProduct(w http.ResponseWriter, r *http.Request) {
 		responses.ERROR(w, http.StatusUnauthorized, errors.New("Unauthorized"))
 		return
 	}
-	if uid != product.AuthorID {
+	if uid != product.OwnerID {
 		responses.ERROR(w, http.StatusUnauthorized, errors.New(http.StatusText(http.StatusUnauthorized)))
 		return
 	}
@@ -110,7 +110,7 @@ func (server *Server) UpdateProduct(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// If a user attempt to update a product not belonging to him
-	if uid != product.AuthorID {
+	if uid != product.OwnerID {
 		responses.ERROR(w, http.StatusUnauthorized, errors.New("Unauthorized"))
 		return
 	}
@@ -130,7 +130,7 @@ func (server *Server) UpdateProduct(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//Also check if the request user id is equal to the one gotten from token
-	if uid != productUpdate.AuthorID {
+	if uid != productUpdate.OwnerID {
 		responses.ERROR(w, http.StatusUnauthorized, errors.New("Unauthorized"))
 		return
 	}
@@ -181,7 +181,7 @@ func (server *Server) DeleteProduct(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Is the authenticated user, the owner of this product?
-	if uid != product.AuthorID {
+	if uid != product.OwnerID {
 		responses.ERROR(w, http.StatusUnauthorized, errors.New("Unauthorized"))
 		return
 	}
