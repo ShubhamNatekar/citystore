@@ -64,7 +64,7 @@ func (p *Product) SaveProduct(db *gorm.DB) (*Product, error) {
 func (p *Product) FindAllProducts(db *gorm.DB) (*[]Product, error) {
 	var err error
 	products := []Product{}
-	err = db.Debug().Model(&Product{}).Limit(100).Find(&products).Error
+	err = db.Debug().Model(&Product{}).Limit(10).Find(&products).Error
 	if err != nil {
 		return &[]Product{}, err
 	}
