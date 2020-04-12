@@ -1,19 +1,33 @@
+# citystore App
 
-## We are building a online shoping application where a user can:
+## Introduction
+This is online shopping app which the provides products from the nearest shop.
+
+## Tech Stack
+
+- Golang - backend language
+- ReactJS - UI technology
+- Postgres - DB to store data
+- Mysql 
+- GORM (A Golang ORM)
+- JWT - user authentication
+- Gorilla Mux (For HTTP routing and URL matcher)
+
+## Abilities
+
 - Signup (Register)
 - Edit his account 
 - Shutdown (Delete his account)
+- View all Products 
+- Buy Product & Add to cart
 - Owner can add a products
-- Edit Products created by him 
-- User can view all Products 
-- User can buy particular Product .
+- Edit Products created by him
 
-### This is a application build with golang, jwt, gorm, postgresql, mysql ,nginx and docker
+## Steps to run
 
-To run this application You should have docker and docker-compose installed on your machine.
-
-* sudo apt-get install docker.io && apt-get install docker-compose.
-
-After downloading the application you can start with one single command.
-
-* docker-compose up.
+1. Clone the repo
+2. Stop host machine services (postgresql/mysql/nginx)
+  eg.sudo service postgresql stop
+2. Run the app 
+  a. cd citystore
+  b. docker-compose up
