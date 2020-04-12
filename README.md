@@ -1,5 +1,5 @@
 
-#We are building a online shoping application where a user can:
+**We are building a online shoping application where a user can:
     -Signup (Register) ,
     -Edit his account ,
     -Shutdown (Delete his account) ,
