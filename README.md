@@ -26,11 +26,10 @@ This is online shopping app which the provides products from the nearest shop.
 ## Steps to run
 
 1. Clone the repo
-2. Stop host machine services (postgresql/mysql/nginx)
-  
+
+2. Stop host machine services (postgresql/mysql/nginx)  
   eg.sudo service postgresql stop
-3. Run the app 
-  
-  a. cd citystore
-  
+
+3. Run the app    
+  a. cd citystore 
   b. docker-compose up
