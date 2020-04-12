@@ -31,5 +31,5 @@ This is online shopping app which the provides products from the nearest shop.
   eg.sudo service postgresql stop
 
 3. Run the app    
-  a. cd citystore 
+  a. cd citystore     
   b. docker-compose up
