@@ -6,9 +6,9 @@ This is online shopping app which the provides products from the nearest shop.
 ## Tech Stack
 
 - Golang - backend language
-- ReactJS - UI technology
+- ReactJS - UI technology (working)
 - Postgres - DB to store data
-- Mysql 
+- Mysql (optional)
 - GORM (A Golang ORM)
 - JWT - user authentication
 - Gorilla Mux (For HTTP routing and URL matcher)
